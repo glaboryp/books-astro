@@ -2,17 +2,22 @@
 export interface Props {
   id: string
   title: string
-  img: string
+  gratis: boolean
 }
 
-const {
-  id,
-  title,
-  img
-} = Astro.props
+const { id, title, gratis } = Astro.props
+
+const status = gratis ? "Gratuito" : "De pago"
 ---
 
 <a class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl" href={`/${id}`}>
+  <span class:list={[
+      "text-xs font-semibold mr-2 px-2.5 py-0.5 rounded",
+      {
+        "bg-green-400 text-green-900": gratis,
+        "bg-blue-400 text-blue-900": !gratis
+      }
+    ]}>{status}</span>
   <img
     alt={`Portada del libro ${title}`}
     class="aspect-[128/165] h-full object-cover w-full max-w-full rounded"
