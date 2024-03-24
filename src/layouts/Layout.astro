@@ -1,0 +1,31 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import Footer from '../components/Footer.astro'
+
+const { title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Libros de programación recomendados">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<meta name="view-transition" content="same-origin" />
+		<ViewTransitions />
+	</head>
+	<body>
+		<div id="content">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+</style>
