@@ -17,7 +17,7 @@ export const books = [
   },
   {
     id: 'javascript-inspirate',
-    title: 'Javascript, ¡Inspirate!',
+    title: 'Javascript, ¡Inspírate!',
     description: 'Un libro de programación sencillo y divertido que muestra cómo programar en JavaScript desde cero. Es un viaje desde los abismos profundos de la duda, pasando por el pseudocódigo hasta llegar al maravilloso mundo de las peticiones AJAX. Hay muchas paradas en el camino, en las que aprenderemos todo lo que necesitas para empezar tu aventura como desarrollador Front-End con sólidas bases en JavaScript. No es necesario que tengas experiencia programando, pero si que es importante que sepas cómo se hacen páginas web estáticas, con conocimiento en HTML y CSS.',
     author: 'Ulises Gascón',
     link: 'https://leanpub.com/javascript-inspirate',
@@ -26,7 +26,7 @@ export const books = [
   {
     id: 'clean-code',
     title: 'Clean Code: Manual de desarrollo ágil de software',
-    description: 'En la portada de la introducción de este libro hay una imagen divertida que dice: ‘The only valid               measurement of code quality is WTFs/minute. Y se ven 2 puertas, una que dice ‘Goodcode’ y otra que pone ‘Badcode’, y nos hace una pregunta: ¿En qué puerta está nuestro código o nuestro equipo o empresa? Nos habla acerca de que la única manera de escoger la puerta correcta es mediante la maestría, que no es más que conocimiento y trabajo. Para escribir código limpio no solo es necesario conocer patrones y estilos de diseño de software y saberse la teoría, hay que practicarlo, hay que fallar y volver a practicarlo, solo así se podrá escribir buen código.',
+    description: 'En la portada de la introducción de este libro hay una imagen divertida que dice: ‘The only valid measurement of code quality is WTFs/minute. Y se ven 2 puertas, una que dice ‘Goodcode’ y otra que pone ‘Badcode’, y nos hace una pregunta: ¿En qué puerta está nuestro código o nuestro equipo o empresa? Nos habla acerca de que la única manera de escoger la puerta correcta es mediante la maestría, que no es más que conocimiento y trabajo. Para escribir código limpio no solo es necesario conocer patrones y estilos de diseño de software y saberse la teoría, hay que practicarlo, hay que fallar y volver a practicarlo, solo así se podrá escribir buen código.',
     author: 'Robert C. Martin',
     link: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship-ebook/dp/B001GSTOAM',
     gratis: false
