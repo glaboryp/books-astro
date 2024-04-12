@@ -3,8 +3,6 @@ import ThemeIcon from "./ThemeIcon.astro"
 
 let inicio = true
 if (Object.keys(Astro.params).length > 0) inicio = false
-console.log(Astro.params)
-console.log(inicio)
 ---
 <header class="flex justify-center">
   { !inicio && 
