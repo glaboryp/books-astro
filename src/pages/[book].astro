@@ -1,55 +1,72 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { books } from "../data/books";
+import Layout from '../layouts/Layout.astro'
+import { books } from '../data/books'
 
 const { book } = Astro.params
 
-const info = books.find(b => b.id === book)
+const info = books.find((b) => b.id === book)
 if (!info) {
-  return Astro.redirect("/404")
+	return Astro.redirect('/404')
 }
-const status = info.gratis ? "Leer ahora" : "Comprar ahora"
+const status = info.gratis ? 'Leer ahora' : 'Comprar ahora'
 
 export function getStaticPaths() {
-  return books.map(element => ({
-    params: { book: element.id }
-  }))
+	return books.map((element) => ({
+		params: { book: element.id }
+	}))
 }
 ---
 
 <Layout title={`Libro ${info.title}`}>
-  <main class="m-auto max-w-4xl">
-    <div class="grid grid-cols-1 sm:grid-cols-[300px_1fr] gap-x-12 mt-4 md:mt-20 px-8">
-      <div class="flex flex-col mb-10">
-        <picture class="mb-8 w-full relative">
-          <img
-            class="aspect-[389/500] h-full object-cover w-full max-w-full rounded"
-            src={`/img/${book}.webp`}
-            alt={`Portada del libro ${info.title}`}
-            style={`view-transition-name: book-${info.id}`}
-          />
-        </picture>
+	<main class='m-auto max-w-4xl'>
+		<div class='grid grid-cols-1 sm:grid-cols-[300px_1fr] gap-x-12 mt-4 md:mt-20 px-8'>
+			<div class='flex flex-col mb-10'>
+				<picture class='mb-8 w-full relative'>
+					<img
+						class='aspect-[389/500] h-full object-cover w-full max-w-full rounded'
+						src={`/img/${book}.webp`}
+						alt={`Portada del libro ${info.title}`}
+						style={`view-transition-name: book-${info.id}`}
+					/>
+				</picture>
 
-        <a href={info.link} target="_blank" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 justify-center">
-          {
-            info.gratis 
-            ? <svg class="w-3.5 h-3.5 mr-2" viewBox="0 0 24 24" fill="none" stroke="#ffffff">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
-              </svg>
-            : <svg class="w-3.5 h-3.5 mr-2" fill="currentColor" viewBox="0 0 18 21">
-                <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
-              </svg>
-          }
-          {status}
-        </a>
-      </div>
+				<a
+					href={info.link}
+					target='_blank'
+					class='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 justify-center'
+				>
+					{info.gratis ? (
+						<svg class='w-3.5 h-3.5 mr-2' viewBox='0 0 24 24' fill='none' stroke='#ffffff'>
+							<g id='SVGRepo_bgCarrier' stroke-width='0'></g>
+							<g id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'></g>
+							<g id='SVGRepo_iconCarrier'>
+								{' '}
+								<path
+									d='M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21'
+									stroke='#ffffff'
+									stroke-width='2'
+									stroke-linecap='round'
+									stroke-linejoin='round'
+								></path>{' '}
+							</g>
+						</svg>
+					) : (
+						<svg class='w-3.5 h-3.5 mr-2' fill='currentColor' viewBox='0 0 18 21'>
+							<path d='M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z' />
+						</svg>
+					)}
+					{status}
+				</a>
+			</div>
 
-      <aside class="mt-10 md:mt-0">
-        <h1 class="text-4xl font-black mb-4">{info.title}</h1>
-        <p class="text-lg mb-4">{info.description}</p>
-        <p><strong>Autor:</strong> <span class="font-semibold text-gray-800 dark:text-gray-300">{info.author}</span></p>
-      </aside>
-    </div>
-    
-  </main>
+			<aside class='mt-10 md:mt-0'>
+				<h1 class='text-4xl font-black mb-4'>{info.title}</h1>
+				<p class='text-lg mb-4'>{info.description}</p>
+				<p>
+					<strong>Autor:</strong>{' '}
+					<span class='font-semibold text-gray-800 dark:text-gray-300'>{info.author}</span>
+				</p>
+			</aside>
+		</div>
+	</main>
 </Layout>

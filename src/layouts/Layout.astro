@@ -1,28 +1,27 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro';
+import Header from '../components/Header.astro'
 import '../styles/global.css'
 
 const { title } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang='es'>
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="description" content="Libros de programación recomendados">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta charset='UTF-8' />
+		<meta name='description' content='Libros de programación recomendados' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<title>{title}</title>
 		<ClientRouter />
 	</head>
-	<body class="bg-white dark:bg-neutral-800 dark:text-gray-100">
-		<Header scale="100"/>
-		<div id="content">
+	<body class='bg-white dark:bg-neutral-800 dark:text-gray-100'>
+		<Header scale='100' />
+		<div id='content'>
 			<slot />
 		</div>
 		<Footer />
 	</body>
 </html>
-
