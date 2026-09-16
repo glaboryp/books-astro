@@ -18,7 +18,7 @@ El proyecto es Open Source, así que si te interesa aportar es super bienvenido.
 
    ```bash
    pnpm install
-   pnpm dev run
+   pnpm dev
    ```
 
 4. Realiza los cambios y crea una pull request 🚀
