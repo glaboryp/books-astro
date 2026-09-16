@@ -7,24 +7,31 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/check": "0.5.10",
-    "@astrojs/cloudflare": "9.2.0",
-    "@astrojs/tailwind": "5.1.0",
-    "astro": "4.5.9",
-    "tailwindcss": "3.4.1"
+    "@astrojs/check": "0.9.10",
+    "@astrojs/cloudflare": "14.3.1",
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.3.2",
+    "tailwindcss": "4.3.3"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-config-standard": "17.1.0",
-    "eslint-plugin-astro": "0.33.1",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-n": "16.6.2",
-    "eslint-plugin-promise": "6.1.1",
-    "prettier": "3.2.5",
-    "prettier-plugin-astro": "0.13.0"
+    "@eslint/js": "10.0.1",
+    "eslint": "10.10.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "3.2.0",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-n": "18.3.0",
+    "eslint-plugin-promise": "7.3.0",
+    "globals": "17.12.0",
+    "neostandard": "0.14.0-next.1",
+    "prettier": "3.9.7",
+    "prettier-plugin-astro": "1.0.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0"
   }
 }

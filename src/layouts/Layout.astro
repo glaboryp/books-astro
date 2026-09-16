@@ -1,7 +1,8 @@
 ---
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro';
+import '../styles/global.css'
 
 const { title } = Astro.props
 ---
@@ -14,7 +15,7 @@ const { title } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="bg-white dark:bg-neutral-800 dark:text-gray-100">
 		<Header scale="100"/>
