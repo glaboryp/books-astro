@@ -23,5 +23,15 @@ const { title } = Astro.props
 			<slot />
 		</div>
 		<Footer />
+		<script is:inline>
+			document.addEventListener('astro:before-swap', () => {
+				sessionStorage.setItem(`scroll:${window.location.pathname}`, String(window.scrollY))
+			})
+
+			document.addEventListener('astro:page-load', () => {
+				const saved = sessionStorage.getItem(`scroll:${window.location.pathname}`)
+				if (saved !== null) window.scrollTo(0, Number(saved))
+			})
+		</script>
 	</body>
 </html>

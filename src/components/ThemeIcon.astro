@@ -1,6 +1,8 @@
 <button
 	type='button'
 	id='themeToggle'
+	aria-label='Cambiar tema claro/oscuro'
+	aria-pressed='false'
 	class='fixed top-5 right-5 shadow-sm hover:bg-gray-50 dark:ring-0 dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:shadow-highlight/4 group rounded-md'
 >
 	<svg
@@ -30,6 +32,11 @@
 </button>
 
 <script is:inline>
+	const syncToggleState = () => {
+		const isDark = document.documentElement.classList.contains('dark')
+		document.getElementById('themeToggle')?.setAttribute('aria-pressed', String(isDark))
+	}
+
 	const applyTheme = () => {
 		const theme = (() => {
 			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -48,6 +55,7 @@
 		}
 
 		window.localStorage.setItem('theme', theme)
+		syncToggleState()
 	}
 
 	applyTheme()
@@ -61,5 +69,6 @@
 
 		const isDark = element.classList.contains('dark')
 		localStorage.setItem('theme', isDark ? 'dark' : 'light')
+		syncToggleState()
 	})
 </script>
