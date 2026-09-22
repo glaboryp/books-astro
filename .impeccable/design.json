@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T08:56:39Z",
+  "title": "Design System: Libros de programación",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Azul confiable",
+        "canonical": "#1d4ed8",
+        "tonalRamp": [
+          "#172554",
+          "#1e3a8a",
+          "#1e40af",
+          "#1d4ed8",
+          "#3b82f6",
+          "#60a5fa",
+          "#93c5fd",
+          "#dbeafe"
+        ]
+      },
+      "secondary-bg": {
+        "role": "secondary",
+        "displayName": "Verde recomendación",
+        "canonical": "#4ade80",
+        "tonalRamp": [
+          "#052e16",
+          "#14532d",
+          "#166534",
+          "#22c55e",
+          "#4ade80",
+          "#86efac",
+          "#bbf7d0",
+          "#f0fdf4"
+        ]
+      },
+      "tertiary": {
+        "role": "tertiary",
+        "displayName": "Sky enlace",
+        "canonical": "#0ea5e9",
+        "tonalRamp": [
+          "#082f49",
+          "#0369a1",
+          "#0284c7",
+          "#0ea5e9",
+          "#38bdf8",
+          "#7dd3fc",
+          "#bae6fd",
+          "#e0f2fe"
+        ]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Blanco / Neutral 800",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#171717",
+          "#262626",
+          "#404040",
+          "#737373",
+          "#a3a3a3",
+          "#d4d4d4",
+          "#e5e5e5",
+          "#ffffff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Lockup del título del sitio en el header, dos líneas apiladas."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Título del libro en su ficha individual."
+      },
+      "body": { "displayName": "Body", "purpose": "Descripción del libro en su ficha." },
+      "label": { "displayName": "Label", "purpose": "Texto de botones y badges." }
+    },
+    "shadows": [
+      {
+        "name": "hover-lift",
+        "value": "0 25px 50px -12px rgba(0,0,0,0.25)",
+        "purpose": "Sombra que aparece al hover sobre una portada de libro (shadow-2xl); no existe en reposo."
+      },
+      {
+        "name": "toggle-ambient",
+        "value": "0 1px 2px 0 rgba(0,0,0,0.05)",
+        "purpose": "Sombra sutil constante del botón flotante de cambio de tema (shadow-sm)."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal: \"Leer ahora\" / \"Comprar ahora\" en la ficha de libro.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg class=\"ds-btn-icon\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"2\"><path d=\"M4 19V6.2C4 5.08 4 4.52 4.22 4.09C4.41 3.72 4.72 3.41 5.09 3.22C5.52 3 6.08 3 7.2 3H16.8C17.92 3 18.48 3 18.91 3.22C19.28 3.41 19.59 3.72 19.78 4.09C20 4.52 20 5.08 20 6.2V17H6C4.9 17 4 17.9 4 19ZM4 19C4 20.1 4.9 21 6 21H20M9 7H15M9 11H15M19 17V21\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Leer ahora</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #1d4ed8; color: #ffffff; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: background 0.15s; } .ds-btn-primary:hover { background: #1e40af; } .ds-btn-icon { width: 14px; height: 14px; }"
+    },
+    {
+      "name": "Free Badge",
+      "kind": "chip",
+      "refersTo": "badge-free",
+      "description": "Etiqueta \"Gratuito\" sobre la portada de un libro.",
+      "html": "<span class=\"ds-badge-free\">Gratuito</span>",
+      "css": ".ds-badge-free { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 4px; background: #4ade80; color: #14532d; }"
+    },
+    {
+      "name": "Paid Badge",
+      "kind": "chip",
+      "refersTo": "badge-paid",
+      "description": "Etiqueta \"De pago\" sobre la portada de un libro.",
+      "html": "<span class=\"ds-badge-paid\">De pago</span>",
+      "css": ".ds-badge-paid { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 4px; background: #60a5fa; color: #172554; }"
+    },
+    {
+      "name": "Book Card",
+      "kind": "card",
+      "refersTo": "book-card",
+      "description": "Portada de libro con hover táctil, usada en la rejilla de la portada.",
+      "html": "<a class=\"ds-book-card\" href=\"#\"><img class=\"ds-book-cover\" src=\"cover.webp\" alt=\"Portada del libro\" /></a>",
+      "css": ".ds-book-card { display: inline-block; transition: transform 0.15s, filter 0.15s, box-shadow 0.15s; } .ds-book-card:hover { transform: scale(1.05); filter: contrast(1.25); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); } .ds-book-cover { aspect-ratio: 128 / 165; height: 100%; width: 100%; max-width: 100%; object-fit: cover; border-radius: 4px; }"
+    },
+    {
+      "name": "Theme Toggle",
+      "kind": "custom",
+      "refersTo": "theme-toggle",
+      "description": "Botón flotante de cambio de tema claro/oscuro, fijo en la esquina superior derecha.",
+      "html": "<button class=\"ds-theme-toggle\" type=\"button\" aria-label=\"Cambiar tema\"><svg width=\"24\" height=\"24\" viewBox=\"-6 -6 36 36\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#0ea5e9\" fill=\"#e0f2fe\"><path d=\"M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z\"/></svg></button>",
+      "css": ".ds-theme-toggle { position: fixed; top: 20px; right: 20px; border-radius: 6px; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); background: #ffffff; border: none; padding: 6px; cursor: pointer; } .ds-theme-toggle:hover { background: #f9fafb; }"
+    },
+    {
+      "name": "Title Lockup",
+      "kind": "custom",
+      "refersTo": "title-lockup",
+      "description": "Título del sitio en el header, dos líneas apiladas en mayúsculas.",
+      "html": "<h1 class=\"ds-title-lockup\">Libros de<span class=\"ds-title-sub\">programación</span></h1>",
+      "css": ".ds-title-lockup { font-weight: 900; text-transform: uppercase; text-align: center; font-size: clamp(2.25rem, 8vw, 6rem); line-height: 1; padding: 32px 16px; } .ds-title-sub { display: block; font-size: 0.55em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Reading Nook",
+    "overview": "Este no es un catálogo ni una tienda: es la estantería personal de Gloria, abierta a quien esté empezando (o no) en programación. Cada libro está ahí porque alguien lo leyó de verdad, y el diseño debe sentirse como que alguien real te está recomendando algo, no como un listado generado. La densidad es alta (una parrilla de portadas, como libros apretados en un estante) pero la interacción es cálida: las portadas reaccionan al tacto (hover:scale-105, hover:contrast-125, hover:shadow-2xl) en vez de quedarse rígidas. Rechazo confirmado: nada de estética de e-commerce (carritos, precios destacados, sensación de venta). La distinción \"Gratuito\" / \"De pago\" es información honesta sobre acceso, no un precio a la venta.",
+    "keyCharacteristics": [
+      "Portada de libro como protagonista visual; el texto es soporte.",
+      "Un único acento de acción (azul) para toda decisión que el visitante puede tomar.",
+      "Superficie plana en reposo; la sombra aparece solo como respuesta al hover.",
+      "Título del sitio como pieza tipográfica propia (mayúsculas, peso máximo), no un logo."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "El azul es el único color que implica \"puedes pulsar esto\". El verde y el sky no se usan nunca para llamadas a la acción, solo para estado (gratis) y navegación de texto (enlaces).",
+        "section": "colors"
+      },
+      {
+        "name": "The One Weight Jump Rule",
+        "body": "La jerarquía se construye saltando directamente de peso normal a font-black (900); no hay pesos intermedios en el sistema actual.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hover-Reveals-Depth Rule",
+        "body": "Ningún elemento tiene sombra en reposo salvo el botón de tema flotante. La sombra es feedback de interactividad, no decoración de superficie.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do usar el azul (#1d4ed8/#1e40af) como único color de acción/CTA del sitio.",
+      "Do dejar los componentes planos en reposo y usar sombra solo como respuesta al hover.",
+      "Do tratar la portada del libro como el elemento con más peso visual de cualquier composición."
+    ],
+    "donts": [
+      "Don't introducir un segundo color de acento para acciones.",
+      "Don't usar amarillo en el CTA de la página 404 — inconsistencia frente a The One Accent Rule.",
+      "Don't añadir bordes visibles a tarjetas, botones o badges."
+    ]
+  }
+}

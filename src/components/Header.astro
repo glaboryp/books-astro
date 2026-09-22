@@ -3,6 +3,8 @@ import ThemeIcon from './ThemeIcon.astro'
 
 let inicio = true
 if (Object.keys(Astro.params).length > 0) inicio = false
+
+const TitleTag = inicio ? 'h1' : 'p'
 ---
 
 <header class='flex justify-center'>
@@ -22,18 +24,25 @@ if (Object.keys(Astro.params).length > 0) inicio = false
 			</svg>
 		</a>
 	)}
-	<h1
-		class:list={[
-			'font-black uppercase text-6xl md:text-8xl text-center py-8 px-4',
-			{
-				'scale-100': inicio,
-				'scale-75': !inicio
-			}
-		]}
-		style='view-transition-name: book-title'
-	>
-		Libros de
-		<span class='block text-[36px] md:text-[58px]'>programación</span>
-	</h1>
+	<div class='flex flex-col items-center'>
+		<TitleTag
+			class:list={[
+				'font-black uppercase text-center',
+				inicio ? 'text-6xl md:text-8xl pt-8 px-4' : 'text-sm md:text-base py-4 px-4 tracking-wide'
+			]}
+			style='view-transition-name: book-title'
+		>
+			Libros de
+			<span class:list={['block', inicio ? 'text-[36px] md:text-[58px]' : 'text-xs md:text-sm']}>
+				programación
+			</span>
+		</TitleTag>
+		{inicio && (
+			<p class='text-center text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto px-4 mt-2 pb-8'>
+				Los libros de programación que he leído (o me han recomendado) — guardados aquí por si te
+				sirven a ti también. — Gloria
+			</p>
+		)}
+	</div>
 	<ThemeIcon />
 </header>
