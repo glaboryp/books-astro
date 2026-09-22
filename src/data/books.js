@@ -88,5 +88,23 @@ export const books = [
 		author: 'Raúl González Duque',
 		link: 'http://mundogeek.net/tutorial-python/',
 		gratis: true
+	},
+	{
+		id: 'el-motor-de-la-inteligencia-artificial',
+		title: 'El motor de la Inteligencia Artificial',
+		description:
+			'"El Motor de la Inteligencia Artificial" es el libro para quien no se conforma con usar ChatGPT o Gemini y quiere entender de verdad qué hay detrás: redes neuronales, el paper "Attention is All You Need" que dio origen a los Transformers, y cómo funcionan los modelos de difusión que generan imágenes y vídeo. No es un libro de texto académico ni un folleto sobre prompts — es un manual de taller escrito por un ingeniero que ha diseccionado la IA generativa, con una parte muy práctica en la que construyes y entrenas tu propio modelo de lenguaje con Python y PyTorch. Incluye además un glosario, un resumen de las matemáticas esenciales y una autoevaluación para comprobar lo aprendido.',
+		author: 'Joaquín Ruiz',
+		link: 'https://www.amazon.es/gp/product/B0GT566CCL',
+		gratis: false
+	},
+	{
+		id: 'spec-driven-development',
+		title: 'Del vibe coding al Spec-Driven Development',
+		description:
+			'Un libro que parte de un problema muy real: programar a base de intuición con un agente de IA (vibe coding) funciona genial la primera semana y se convierte en una pesadilla de mantenimiento el sexto mes. Joaquín Ruiz propone el desarrollo guiado por especificaciones (Spec-Driven Development), donde la especificación pasa a ser el código fuente real y lo que genera la IA es solo un artefacto derivado, con casos centrados en bases de código legadas, equipos y restricciones reales de empresa, no en demos de juguete. Enseña a configurar GitHub Spec-Kit con Claude Code, GitHub Copilot o Cursor, a redactar una "constitución" de proyecto que el agente realmente respete, y a blindar el flujo con el enfoque OWASP para LLM. Pensado para desarrolladores con experiencia y tech leads que quieren meter IA en su equipo sin que el repositorio se degrade.',
+		author: 'Joaquín Ruiz',
+		link: 'https://www.amazon.es/gp/product/B0HJRMR5JQ',
+		gratis: false
 	}
 ]
