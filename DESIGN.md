@@ -153,6 +153,7 @@ El sistema es plano en reposo. La sombra existe únicamente como respuesta a la 
 Esquinas suavemente redondeadas en casi todo (`rounded`/`rounded-lg`, 4–8px): portadas de libro, botones, badges. El botón de volver en la ficha de libro es la única forma completamente circular (`rounded-full`) del sitio, reservada a un botón de icono puro. Sin bordes visibles en ningún componente — la separación se hace por espacio y color, nunca por línea.
 
 ### Favicon / Brand Mark
+
 `public/favicon.svg` — tres barras horizontales redondeadas apiladas (una mini estantería de libros vista de canto), en los tres pasos ya documentados de la rampa Primary (`#1d4ed8`, `#3b82f6`, `#60a5fa`), sin fondo. Reutiliza tokens existentes en vez de introducir un color nuevo.
 
 ## Components

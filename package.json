@@ -16,22 +16,22 @@
   "dependencies": {
     "@astrojs/check": "0.9.10",
     "@tailwindcss/vite": "4.3.3",
-    "astro": "7.3.2",
+    "astro": "7.3.5",
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "eslint": "10.10.0",
+    "eslint": "10.11.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-astro": "3.2.0",
+    "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-n": "18.3.0",
+    "eslint-plugin-n": "18.4.0",
     "eslint-plugin-promise": "7.3.0",
     "globals": "17.12.0",
     "neostandard": "0.14.0-next.1",
-    "prettier": "3.9.7",
-    "prettier-plugin-astro": "1.0.0",
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.0",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.70.0"
+    "typescript-eslint": "8.71.0"
   }
 }
