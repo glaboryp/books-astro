@@ -2,6 +2,9 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+
+overrides:
+  '@emnapi/runtime': 1.11.3
 minimumReleaseAgeExclude:
   - eslint-plugin-astro@3.2.0
   - prettier@3.9.7
