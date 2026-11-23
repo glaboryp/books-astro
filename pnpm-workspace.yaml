@@ -5,6 +5,10 @@ allowBuilds:
 
 overrides:
   '@emnapi/runtime': 1.11.3
+  typescript-eslint: ^8.73.0
+  '@typescript-eslint/eslint-plugin': ^8.73.0
+  '@typescript-eslint/parser': ^8.73.0
+  '@typescript-eslint/typescript-estree': ^8.73.0
 minimumReleaseAgeExclude:
   - eslint-plugin-astro@3.2.0
   - prettier@3.9.7
